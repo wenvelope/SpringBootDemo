@@ -19,15 +19,15 @@ class TestController {
     val wuHongRu = User("wuhongru","123456")
 
     @GetMapping("/moon")
+    @ApiOperation(value = "test1", response = User::class, responseReference = "User")
     fun moon():ResponseEntity<Any>{
         return ResponseEntity(wuHongRu, HttpStatus.OK)
     }
     @ApiOperation(value = "返回你输入的param")
     @GetMapping("/moon/23")
-    @ApiImplicitParams(ApiImplicitParam(name = "name", value = "sas", required = false,defaultValue = "sasa", paramType = "query", example = "sasa"),
-        ApiImplicitParam(name = "2323", value = "sas", defaultValue = "sasa", paramType ="query", example = "sasa")
+    @ApiImplicitParams(ApiImplicitParam(name = "name", value = "吴鸿儒", required = true, dataTypeClass = String::class, paramType = "query", example = "吴鸿儒"),
         )
-    fun test2(@RequestParam(value = "name", required = false, defaultValue = "wuhongru") name:String):String{
-        return name
+    fun test2(@RequestParam(value = "name", required = true) name:String):User{
+        return wuHongRu
     }
 }

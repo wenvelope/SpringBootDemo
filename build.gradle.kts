@@ -22,6 +22,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-mail")
+    implementation("com.github.xiaoymin:knife4j-spring-boot-starter:3.0.3")
 }
 
 tasks.withType<KotlinCompile> {
