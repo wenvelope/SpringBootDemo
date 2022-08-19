@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse
 class TestInterceptor:HandlerInterceptor {
 
     override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {
-        println("preHandle")
+//        println("preHandle")
         return super.preHandle(request, response, handler)
     }
 
@@ -22,7 +22,7 @@ class TestInterceptor:HandlerInterceptor {
         modelAndView: ModelAndView?
     ) {
         super.postHandle(request, response, handler, modelAndView)
-        println("postHandle")
+//        println("postHandle")
     }
 
     override fun afterCompletion(
@@ -32,6 +32,6 @@ class TestInterceptor:HandlerInterceptor {
         ex: Exception?
     ) {
         super.afterCompletion(request, response, handler, ex)
-        println("afterCompletion")
+//        println("afterCompletion")
     }
 }

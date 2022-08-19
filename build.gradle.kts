@@ -24,8 +24,11 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springframework.boot:spring-boot-starter-mail")
     implementation("com.github.xiaoymin:knife4j-spring-boot-starter:3.0.3")
+    implementation("org.springframework.boot:spring-boot-starter-websocket")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    implementation("mysql:mysql-connector-java")
+    implementation("com.google.code.gson:gson:2.9.0")
 }
-
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
@@ -36,3 +39,4 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+

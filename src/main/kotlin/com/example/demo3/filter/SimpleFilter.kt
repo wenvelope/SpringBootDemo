@@ -6,9 +6,6 @@ import javax.servlet.*
 @Component
 class SimpleFilter: Filter {
     override fun doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain) {
-        println(request.remoteHost)
-        println(request.remoteAddr)
-        println(request.remotePort)
         chain.doFilter(request,response)
     }
 

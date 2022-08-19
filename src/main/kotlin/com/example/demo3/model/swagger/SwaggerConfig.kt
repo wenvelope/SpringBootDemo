@@ -1,4 +1,4 @@
-package com.example.demo3.swagger
+package com.example.demo3.model.swagger
 
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j
 import org.springframework.context.annotation.Bean
