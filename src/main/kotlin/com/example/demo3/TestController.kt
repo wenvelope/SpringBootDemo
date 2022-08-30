@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping(value =["/"])
 @Api(tags = ["测试接口"])
 class TestController {
     @Autowired
