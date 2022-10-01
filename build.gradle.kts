@@ -28,6 +28,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
     implementation("mysql:mysql-connector-java")
     implementation("com.google.code.gson:gson:2.9.0")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 tasks.withType<KotlinCompile> {
     kotlinOptions {
